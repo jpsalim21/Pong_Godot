@@ -1,8 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://dgv8bmdf307lq"]
+[gd_scene load_steps=11 format=3 uid="uid://dgv8bmdf307lq"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_e5mh1"]
 [ext_resource type="Texture2D" uid="uid://djqymgjb4yado" path="res://icon.svg" id="1_x2qoe"]
-[ext_resource type="Script" path="res://Inimigo.gd" id="3_an8kj"]
 [ext_resource type="Script" path="res://bola.gd" id="3_gobwq"]
 [ext_resource type="Script" path="res://game_controller.gd" id="5_k6pfx"]
 
@@ -13,13 +12,10 @@ size = Vector2(20, 128)
 size = Vector2(1365, 167)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q1p6d"]
-size = Vector2(38, 38)
+size = Vector2(30, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_okq5t"]
-size = Vector2(44, 30)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_y0hgl"]
-size = Vector2(30, 44)
+size = Vector2(38, 38)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vmqw"]
 bg_color = Color(0.69, 0.69, 0.69, 1)
@@ -47,7 +43,7 @@ shape = SubResource("RectangleShape2D_62frg")
 [node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
 position = Vector2(535, 0)
 collision_mask = 5
-script = ExtResource("3_an8kj")
+script = ExtResource("1_e5mh1")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D2"]
 self_modulate = Color(100, 100, 100, 1)
@@ -87,11 +83,6 @@ texture = ExtResource("1_x2qoe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bola/Lado"]
 shape = SubResource("RectangleShape2D_okq5t")
-
-[node name="Vertical" type="Area2D" parent="Bola"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bola/Vertical"]
-shape = SubResource("RectangleShape2D_y0hgl")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -153,6 +144,5 @@ collision_mask = 7
 shape = SubResource("RectangleShape2D_7bi68")
 
 [connection signal="body_entered" from="Bola/Lado" to="Bola" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Bola/Vertical" to="Bola" method="_on_vertical_body_entered"]
 [connection signal="body_entered" from="GameController/Area2D" to="GameController" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="GameController/Area2D2" to="GameController" method="_on_area_2d_2_body_entered"]
