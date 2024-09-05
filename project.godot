@@ -15,6 +15,10 @@ run/main_scene="res://CenaPrincipal.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
+[dotnet]
+
+project/assembly_name="Pong"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/script-tabs/plugin.cfg")
