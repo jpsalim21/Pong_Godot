@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dgv8bmdf307lq"]
+[gd_scene load_steps=12 format=3 uid="uid://dgv8bmdf307lq"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_e5mh1"]
 [ext_resource type="Texture2D" uid="uid://djqymgjb4yado" path="res://icon.svg" id="1_x2qoe"]
 [ext_resource type="Script" path="res://bola.gd" id="3_gobwq"]
+[ext_resource type="Texture2D" uid="uid://ne8ikwdp6qpi" path="res://bolaImg.png" id="4_0fm80"]
 [ext_resource type="Script" path="res://game_controller.gd" id="5_k6pfx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_62frg"]
@@ -76,8 +77,9 @@ shape = SubResource("RectangleShape2D_q1p6d")
 
 [node name="Sprite2D" type="Sprite2D" parent="Bola"]
 self_modulate = Color(100, 100, 100, 1)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("1_x2qoe")
+position = Vector2(9.53674e-07, 9.53674e-07)
+scale = Vector2(1.875, 1.875)
+texture = ExtResource("4_0fm80")
 
 [node name="Lado" type="Area2D" parent="Bola"]
 

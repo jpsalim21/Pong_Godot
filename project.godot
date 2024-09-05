@@ -21,7 +21,7 @@ project/assembly_name="Pong"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/script-tabs/plugin.cfg")
+enabled=PackedStringArray("res://addons/net.yarvis.pixel_pen/plugin.cfg", "res://addons/script-tabs/plugin.cfg")
 
 [input]
 
@@ -48,4 +48,5 @@ s={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="mobile"
